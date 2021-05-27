@@ -25,10 +25,10 @@
     "license": "ISC",
     "types": "dist/index.d.ts",
     "dependencies": {
+        "@types/node-fetch": "^2.5.10",
         "node-fetch": "^2.6.1"
     },
     "devDependencies": {
-        "@types/node-fetch": "^2.5.10",
         "prettier": "^1.19.1",
         "ts-node": "^8.6.1",
         "tslint": "^5.20.1",

@@ -1,0 +1,42 @@
+{
+    "name": "web-login",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\" \"typings/**/*.d.ts\"",
+        "lint": "tslint -p tsconfig.json",
+        "lint-fix": "tslint -p tsconfig.json --fix",
+        "postversion": "git push && git push --tags",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm test && npm run lint",
+        "preversion": "npm run format && npm run lint",
+        "start": "node dist/index.js",
+        "test": "",
+        "version": "npm run format && git add -A src"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:filiptypjeu/npm-web-login.git"
+    },
+    "homepage": "https://github.com/filiptypjeu/npm-web-login",
+    "author": "Filip Stenbacka",
+    "license": "ISC",
+    "types": "dist/index.d.ts",
+    "dependencies": {
+        "node-fetch": "^2.6.1"
+    },
+    "devDependencies": {
+        "@types/node-fetch": "^2.5.10",
+        "prettier": "^1.19.1",
+        "ts-node": "^8.6.1",
+        "tslint": "^5.20.1",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^3.7.4"
+    },
+    "files": [
+        "dist/**/*"
+    ],
+    "keywords": []
+}

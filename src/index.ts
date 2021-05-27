@@ -84,8 +84,6 @@ class WebLoginManager {
       token = regexp ? regexp[1] : "";
     }
 
-    console.log(token);
-
     const loginOptions: RequestInit = {
       method: "POST",
       redirect: "manual",

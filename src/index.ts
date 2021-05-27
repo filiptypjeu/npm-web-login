@@ -6,7 +6,7 @@ interface ICookie {
   expires: number;
 }
 
-export interface WebLoginOptions {
+export interface IWebLoginOptions {
   baseURL: string;
   username: string;
   password: string;
@@ -25,7 +25,7 @@ class WebLoginManager {
 
   private cookies: ICookie[] = [];
 
-  constructor(options: WebLoginOptions) {
+  constructor(options: IWebLoginOptions) {
     this.baseURL = options.baseURL;
     this.username = options.username;
     this.password = options.password;
